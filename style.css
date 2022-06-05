@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+section {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+p.timer {
+    font-size: 120px;
+}
+span.mili-seconds sub{
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+}
+span.mili-seconds {
+    position: relative;
+}
+.split-time {
+    text-transform: uppercase;
+    color: orange;
+    font-size: 30px;
+}
+button{
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    font-size: 20px;
+}
+button.button-start.active {
+    background-color: lightseagreen;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+button.button-start.active:hover, button.split-in-action:hover, button.reset-in-action:hover{
+    box-shadow: 1px 3px 3px gray;
+}
+button.disable{
+    border : 1px solid #a0a0a0;
+    color: #a0a0a0;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+.button-wrapper{
+    padding: 20px 0px;
+}
+button.button-start.active.start-in-action{
+    background-color: deeppink;
+}
+button.split-in-action{
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+button.reset-in-action{
+    background-color: cornflowerblue;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+table  {
+  width: 100%;
+}
+table tr {
+  color : #a0a0a0;
+}
+table tr td {
+  padding: 5px;
+}
+table .red {
+  color :red;
+}
+table .orange {
+  color :orange;
+}
+.display-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: #a0a0a1;
+}
+.log-table {
+  padding: 25px 0px;
+}

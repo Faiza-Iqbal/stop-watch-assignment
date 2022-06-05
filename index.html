@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- UTF-8 Charset to include every character from all human written languages -->
+    <meta charset="utf-8">
+    <!-- Page title that appears in browser tab and while bookmarked -->
+    <title>Stop Watch Assignment</title>
+    <meta name="author" content="Faiza Iqbal">
+    <!-- For SEO purpose -->
+    <meta name="description" content="This is an example.">
+    <!-- For richer user expereince on social media while the page url is shared -->
+    <meta property="og:image" content="This is an example">
+    <meta property="og:description" content="This is an example">
+    <meta property="og:title" content="This is an example">
+    <!-- Favicon/site icon-->
+    <link rel="Shortcut Icon" href="./assets/time-tracking.png" type="image/x-icon">
+    <!--Linking external CSS with template  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Adding javascript -->
+    <script src="./functions.js"></script>
+  </head>
+  <body>
+    <section>
+        <div class="main">
+            <p class="timer" id ="timer"><span id="hours" class="hours">00</span>:<span id="minutes" class="minutes">00</span>:<span id="seconds" class="seconds">00</span>.<span id="ms" class="mili-seconds">0 <sub>00</sub></span>
+            </p>
+            <p id="split-time" class="split-time">Split time</p>
+            <div class="button-wrapper" id="watch-controls">
+            <button onclick="startClicked()" id="button-start" class="button-start active">Start</button>
+            <button onclick="splitClicked()" id="button-split" class="button-split disable">Split</button>
+            <button disabled onclick="resetClicked()" id="button-reset" class="button-reset disable">Reset</button>
+            </div>
+            <hr id="visibility" class="display-none">
+            <div class="log-table">
+              <table>
+                <tbody id= "log">
+                </tbody>
+              </table>
+            </div>
+        </div>
+  </body>
+  </html>
