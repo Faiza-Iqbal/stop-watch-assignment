@@ -129,7 +129,7 @@ function updateStopWatchDom() {
 // Function to add zeros prefix to time digits
 function prefixZerosToNumber(number, length) {
   let numberString = number.toString();
-  for (var i = numberString.length; i < length; i++)
+  for (let i = numberString.length; i < length; i++)
     numberString = "0" + numberString;
   return numberString;
 }
