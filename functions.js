@@ -1,13 +1,13 @@
-let activePauseButton = false; // manage start and paused states because of JS Date fun
-let timerInterval; // for interval id
-let controlButtons; //  managing buttons html elements
-let timer; // managing timer html elements
-let currentStopWatchTime = 0; // current stop watch total milliseconds
+let activePauseButton = false; // manage start and paused states because of JS Date function
+let timerInterval; // for interval id in setInterval
+let controlButtons; //for  managing buttons html elements
+let timer; // managing timer html element
+let currentStopWatchTime = 0; // current stop watch time in total milliseconds
 let initialStopWatchTime = null; // initial stop watch datetime
 let totalPausedTime = 0; // manage Paused time
 let pauseStartTime; // to track time when watch is paused
 let logCounter = 0; // for serial number of logs in log table
-// Object containing time units (hours, mins, secs, ms)
+// Object containing time units in (hours, mins, secs, ms)
 const currentStopWatchTimeObject = {
   milliSeconds: 0,
   seconds: 0,
@@ -28,9 +28,9 @@ function startClicked() {
   activePauseButton = !activePauseButton; // toggle start and paused button states
   if (activePauseButton) {
     //start was Clicked
-    controlButtons[1].disabled = false;
+    controlButtons[1].disabled = false; //Enabling Split Button
     if (currentStopWatchTime == 0)
-      // set initial stop watch time when if timer was 0
+      // set initial stop watch time if timer was 0
       initialStopWatchTime = new Date();
     else {
       // managing total paused time to remove time difference.
@@ -80,7 +80,6 @@ function splitClicked() {
 function makeLogRow(action = "Pause", className = "orange") {
   logCounter++;
   if (logCounter == 1) {
-    document.getElementById("visibility").classList.add("display-block");
     document.getElementById("visibility").classList.remove("display-none");
   }
   return (
@@ -133,7 +132,7 @@ function prefixZerosToNumber(number, length) {
     numberString = "0" + numberString;
   return numberString;
 }
-// Setting time of watch in hours, minutes, secs and ms
+// Setting time of watch in hours, minutes, secs and ms by doing maths on total ms
 function setTimeParts(totalMilliSeconds) {
   currentStopWatchTimeObject.hours = Math.floor(
     totalMilliSeconds / (60 * 60 * 1000)

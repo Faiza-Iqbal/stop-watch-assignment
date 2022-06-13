@@ -68,7 +68,6 @@ function splitClicked() {
 function makeLogRow(action = "Pause", className = "orange") {
   logCounter++;
   if (logCounter == 1) {
-    document.getElementById("visibility").classList.add("display-block");
     document.getElementById("visibility").classList.remove("display-none");
   }
   return (
@@ -89,7 +88,6 @@ function makeLogRow(action = "Pause", className = "orange") {
     " </td> </tr>"
   );
 }
-
 function startTimer() {
   currentStopWatchTime = currentStopWatchTime + 25; // get total time in mili seconds according to interval of 25ms
   setTimeParts(currentStopWatchTime); // set units of time from milliseconds
